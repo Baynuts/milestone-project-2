@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Chicle|Raleway:400,600,700');
+
+html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+        background: linear-gradient(360deg,#0c0c0c 10%,#ffffff 360%);
+}
+
+.col-9 {
+    width: 100%;
+    clear: both;
+}
+
+.col-3 {
+    width: 33%;
+    float: left;
+    text-align: center;
+    color: #fff;
+}
+
+#main-circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#top-left {
+    width: 50%;
+    height: 50%;
+    border: 10px solid #272727;
+    background-color: #EA4436;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    box-shadow: inset 0px 0px 20px 20px #D32416;
+}
+
+#bottom-left {
+    width: 50%;
+    height: 50%;
+    background-color: #4386F4;
+    border: 10px solid #272727;
+    border-radius: 0 0 0 100%;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    box-shadow: inset 0px -3px 20px 20px #0E63F1;   
+}
+
+#top-right {
+    width: 50%;
+    height: 50%;
+    border: 10px solid #272727;
+    background-color: #4DB74A;
+    border-radius: 0 100% 0 0;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    box-shadow: inset -9px 3px 20px 20px #3F983D;
+}
+
+#bottom-right {
+    width: 50%;
+    height: 50%;
+    background-color: #E8EC35;
+    border: 10px solid #272727;
+    border-radius: 0 0 100% 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: inset -9px -6px 20px 20px #BEC212;
+}
+
+#centre {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -126px;
+    margin-top: -63px;
+    padding: 0 20px 0 20px;
+}
+
+.game-name {
+    color: #fff;
+    font-size: 5em;
+    font-weight: 700;
+    -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #272727;
+}
+
+#console {
+    width: 500px;
+    background-color: #000;
+    height: 130px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #606060;
+    border-radius: 20px;
+}
+
+.start-btn {
+    color: #4db74a;
+    background-color: #0000ff00;
+    border: 1px solid #4db74a;
+    border-radius: 10px;
+    line-height: 28px;
+    width: 110px;
+    font-size: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    button:focus {outline:0;}
+}
+
+.start-btn:focus {
+    background-color: #4db74a;
+    color: #000;
+    outline: none;
+}
+
+.score {
+    height: 80px;
+    width: 80px;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 1px solid #606060;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+#count {
+    height: 60px;
+    width: 80px;
+    color: red;
+    margin-top: -8px;
+    margin-bottom: 5px;
+}
+
+.score-txt {
+    font-family: arial;
+    font-size: 12px;
+    color: #f2f2f2;
+}
+
+#hi-score {
+    color: #bd6ccb;
+    text-align: center;
+}
+
+
+.btn-group {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn {
+    background-color: #0000ff00;
+    line-height: 28px;
+    font-size: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+.btn-easy {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #4db74a;
+    border: 1px solid #4db74a;
+}
+
+.btn-easy:focus {
+    background-color: #4db74a;
+    color: #000;
+    outline: none;
+}
+
+.btn-normal {
+    color: #ff9800;
+    border: 1px solid #ff9800;
+}
+
+.btn-normal:focus {
+    background-color: #ff9800;
+    color: #000;
+    outline: none;
+}
+
+.btn-hard {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
+.btn-hard:focus {
+    background-color: #f44336;
+    color: #000;
+    outline: none;
+}
+
+.level {
+    font-family: arial;
+    font-size: 12px;
+    color: #f2f2f2;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+#main-circle {
+    width: 350px;
+    height: 350px;
+margin-top:20%;
+}
+
+#console {
+    width: 350px;
+    }
+
+#top-left {
+border: none;
+box-shadow: none;
+}    
+#top-right {
+border: none;
+box-shadow: none;
+}
+
+#bottom-left {
+border: none;
+box-shadow: none;
+}
+
+#bottom-right {
+border: none;
+box-shadow: none;
+}
+
+#centre {
+
+    margin-left: -81px;
+    margin-top: -40px;
+}
+
+.game-name {
+
+    font-size: 2.5em;
+}
+
+.start-btn {
+    width: 70px;
+    font-size: 1em;
+}
+.btn {
+
+    font-size: 1em;
+        padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+}
