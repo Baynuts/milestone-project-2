@@ -38,7 +38,7 @@ body {
     width: 50%;
     height: 50%;
     border: 10px solid #272727;
-    background-color: #EA4436;
+    background-color: #b83f34;
     border-radius: 100% 0 0 0;
     position: absolute;
     top: -10px;
@@ -49,7 +49,7 @@ body {
 #bottom-left {
     width: 50%;
     height: 50%;
-    background-color: #4386F4;
+    background-color: #3d6dbc;
     border: 10px solid #272727;
     border-radius: 0 0 0 100%;
     position: absolute;
@@ -62,7 +62,7 @@ body {
     width: 50%;
     height: 50%;
     border: 10px solid #272727;
-    background-color: #4DB74A;
+    background-color: #47a645;
     border-radius: 0 100% 0 0;
     position: absolute;
     top: -10px;
@@ -73,7 +73,7 @@ body {
 #bottom-right {
     width: 50%;
     height: 50%;
-    background-color: #E8EC35;
+    background-color: #b9bc31;
     border: 10px solid #272727;
     border-radius: 0 0 100% 0;
     position: absolute;
