@@ -7,8 +7,8 @@ let isGood;
 let gamesGo;
 let pause;
 let hasWon;
-let storedHiScore = localStorage.getItem("hiScore");
-let runHiScore = 0;
+let runHiScore;
+let hiScore;
 let darkRed = "#b83f34";
 let darkGreen = "#47a645";
 let darkBlue = "#3d6dbc";
@@ -226,5 +226,3 @@ if (gamesNumberOfTurn > runHiScore) {
   hiScore.innerHTML = runHiScore;
 }
 }
-
-localStorage.setItem("hiScore", runHiScore);
