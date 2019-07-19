@@ -154,37 +154,37 @@ function gameTurn() {
 }
 
 function red() {
-  topLeft.style.backgroundColor = darkRed;
+  topLeft.style.backgroundColor = lightRed;
   soundOne.play();
 }
 
 function green() {
-  topRight.style.backgroundColor = darkGreen;
+  topRight.style.backgroundColor = lightGreen;
   soundTwo.play();
 }
 
 function blue() {
-  bottomLeft.style.backgroundColor = darkBlue;
+  bottomLeft.style.backgroundColor = lightBlue;
   soundThree.play();
 }
 
 function yellow() {
-  bottomRight.style.backgroundColor = darkYellow;
+  bottomRight.style.backgroundColor = lightYellow;
   soundFour.play();
 }
 
 function resetColors() {
-  topLeft.style.backgroundColor = lightRed;
-  topRight.style.backgroundColor = lightGreen;
-  bottomLeft.style.backgroundColor = lightBlue;
-  bottomRight.style.backgroundColor = lightYellow;
-}
-
-function flashColors() {
   topLeft.style.backgroundColor = darkRed;
   topRight.style.backgroundColor = darkGreen;
   bottomLeft.style.backgroundColor = darkBlue;
   bottomRight.style.backgroundColor = darkYellow;
+}
+
+function flashColors() {
+  topLeft.style.backgroundColor = lightRed;
+  topRight.style.backgroundColor = lightGreen;
+  bottomLeft.style.backgroundColor = lightBlue;
+  bottomRight.style.backgroundColor = lightYellow;
   soundEnd.play();
 }
 
