@@ -9,14 +9,14 @@ let pause;
 let hasWon;
 let runHiScore;
 let hiScore;
-let darkRed = "#b83f34";
-let darkGreen = "#47a645";
-let darkBlue = "#3d6dbc";
-let darkYellow = "#b9bc31";
-let lightRed = "#EA4436";
-let lightGreen = "#4db74a";
-let lightBlue = "#4386f4";
-let lightYellow = "#e8ec35";
+let lightRed = "#b83f34";
+let lightGreen = "#47a645";
+let lightBlue = "#3d6dbc";
+let lightYellow = "#b9bc31";
+let darkRed = "#EA4436";
+let darkGreen = "#4db74a";
+let darkBlue = "#4386f4";
+let darkYellow = "#e8ec35";
 let speed = 800;
 
 //Constants
