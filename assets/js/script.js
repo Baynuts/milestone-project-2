@@ -7,16 +7,16 @@ let isGood;
 let gamesGo;
 let pause;
 let hasWon;
-let runHiScore;
-let hiScore;
-let lightRed = "#b83f34";
-let lightGreen = "#47a645";
-let lightBlue = "#3d6dbc";
-let lightYellow = "#b9bc31";
-let darkRed = "#EA4436";
-let darkGreen = "#4db74a";
-let darkBlue = "#4386f4";
-let darkYellow = "#e8ec35";
+let runHiScore = 0;
+let savedHiScore = localStorage.getItem("hiScore");
+let darkRed = "#b83f34";
+let darkGreen = "#47a645";
+let darkBlue = "#3d6dbc";
+let darkYellow = "#b9bc31";
+let lightRed = "#ff1500";
+let lightGreen = "#3cff38";
+let lightBlue = "#00a4ff";
+let lightYellow = "#faff2b";
 let speed = 800;
 
 //Constants
@@ -129,6 +129,14 @@ function startGame() {
   }
   gamesGo = true;
   pause = setInterval(gameTurn, 800);
+  speed = 800;
+  easyLevel.style.backgroundColor = "#4db74a";
+  easyLevel.style.color = "#000";
+  normalLevel.style.backgroundColor = "#000";
+  normalLevel.style.color = "#ff9800";
+  hardLevel.style.backgroundColor = "#000";
+  hardLevel.style.color = "#f44336";
+  setHiScore();
 }
 
 function gameTurn() {
@@ -191,7 +199,6 @@ function flashColors() {
 function check() {
   if (playerOrder[playerOrder.length - 1] !== gameOrder[playerOrder.length - 1])
     isGood = false;
-
   if (isGood && playerOrder.length == 20)   {
     winGame();
   }
@@ -202,7 +209,6 @@ function check() {
     if (answer) {
         startGame();
     }
-
   }
   if (gamesNumberOfTurn == playerOrder.length && !hasWon && isGood)   {
     gamesNumberOfTurn++;
@@ -221,8 +227,15 @@ function winGame() {
 }
 
 function setHiScore() {
+if (savedHiScore)  {
+  runHiScore = savedHiScore;
+}
 if (gamesNumberOfTurn > runHiScore) {
   runHiScore = gamesNumberOfTurn;
+  hiScore.innerHTML = runHiScore;
+  localStorage.setItem("hiScore", runHiScore);
+}
+else {
   hiScore.innerHTML = runHiScore;
 }
 }

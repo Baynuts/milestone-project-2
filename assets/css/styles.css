@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 50%;
     left: -10px;
-    /* box-shadow: inset 0px -3px 20px 20px #0E63F1;   */
+   /* box-shadow: inset 0px -3px 20px 20px #0E63F1;   */
 }
 
 #top-right {
@@ -112,7 +112,7 @@ body {
 
 .start-btn {
     color: #4db74a;
-    background-color: #00ff00;
+    background-color: #0000ff00;
     border: 1px solid #4db74a;
     border-radius: 10px;
     line-height: 28px;
@@ -280,8 +280,4 @@ box-shadow: none;
         padding-left: 10px;
     padding-right: 10px;
 }
-
-
-
-
 }
