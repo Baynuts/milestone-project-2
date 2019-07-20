@@ -139,6 +139,8 @@ function startGame() {
   if (savedHiScore)  {
     runHiScore = savedHiScore;
   }
+  setHiScore();
+
 }
 
 function gameTurn() {
