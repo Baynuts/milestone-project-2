@@ -136,7 +136,9 @@ function startGame() {
   normalLevel.style.color = "#ff9800";
   hardLevel.style.backgroundColor = "#000";
   hardLevel.style.color = "#f44336";
-  setHiScore();
+  if (savedHiScore)  {
+    runHiScore = savedHiScore;
+  }
 }
 
 function gameTurn() {
@@ -228,9 +230,6 @@ function winGame() {
 }
 
 function setHiScore() {
-if (savedHiScore )  {
-  runHiScore = savedHiScore;
-}
 if (gamesNumberOfTurn > runHiScore) {
   runHiScore = gamesNumberOfTurn;
   hiScore.innerHTML = runHiScore;
@@ -239,4 +238,5 @@ if (gamesNumberOfTurn > runHiScore) {
 else {
   hiScore.innerHTML = runHiScore;
 }
+
 }
