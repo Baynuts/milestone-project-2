@@ -159,6 +159,7 @@ function gameTurn() {
       numberOfTurns++;
       }, 200);
   }
+  setHiScore();
 }
 
 function red() {
@@ -227,7 +228,7 @@ function winGame() {
 }
 
 function setHiScore() {
-if (savedHiScore)  {
+if (savedHiScore )  {
   runHiScore = savedHiScore;
 }
 if (gamesNumberOfTurn > runHiScore) {
