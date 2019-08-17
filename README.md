@@ -88,8 +88,9 @@ I have also made use of the local storage function in JavaScript so that the hi 
 
 ## Deployment
 
-The code can be viewed using GitHub pages: https://baynuts.github.io/milestone-project-2/ 
-While testing I have come across a bug that occurs on certain machines. If the program starts to flash more than one corner at a time you may need to reset your browser cache. To reset your cache press (Shift + F5) and this should cure the problem is cured.
+The code can be viewed using GitHub pages: https://baynuts.github.io/milestone-project-2/.
+ 
+While testing I have come across a bug that occurs on certain machines. If the program starts to flash more than one corner at a time you may need to reset your browser cache. To reset your cache press (Shift + F5) and this should cure the problem.
 
 
 ## Testing
