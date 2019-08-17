@@ -8,14 +8,15 @@ let gamesGo;
 let pause;
 let hasWon;
 let runHiScore = 0;
+let savedHiScore = localStorage.getItem("hiScore");
 let darkRed = "#b83f34";
 let darkGreen = "#47a645";
 let darkBlue = "#3d6dbc";
 let darkYellow = "#b9bc31";
-let lightRed = "#EA4436";
-let lightGreen = "#4db74a";
-let lightBlue = "#4386f4";
-let lightYellow = "#e8ec35";
+let lightRed = "#ff1500";
+let lightGreen = "#3cff38";
+let lightBlue = "#00a4ff";
+let lightYellow = "#faff2b";
 let speed = 800;
 
 //Constants
@@ -128,6 +129,18 @@ function startGame() {
   }
   gamesGo = true;
   pause = setInterval(gameTurn, 800);
+  speed = 800;
+  easyLevel.style.backgroundColor = "#4db74a";
+  easyLevel.style.color = "#000";
+  normalLevel.style.backgroundColor = "#000";
+  normalLevel.style.color = "#ff9800";
+  hardLevel.style.backgroundColor = "#000";
+  hardLevel.style.color = "#f44336";
+  if (savedHiScore)  {
+    runHiScore = savedHiScore;
+  }
+  setHiScore();
+
 }
 
 function gameTurn() {
@@ -150,47 +163,47 @@ function gameTurn() {
       numberOfTurns++;
       }, 200);
   }
+  setHiScore();
 }
 
 function red() {
-  topLeft.style.backgroundColor = darkRed;
+  topLeft.style.backgroundColor = lightRed;
   soundOne.play();
 }
 
 function green() {
-  topRight.style.backgroundColor = darkGreen;
+  topRight.style.backgroundColor = lightGreen;
   soundTwo.play();
 }
 
 function blue() {
-  bottomLeft.style.backgroundColor = darkBlue;
+  bottomLeft.style.backgroundColor = lightBlue;
   soundThree.play();
 }
 
 function yellow() {
-  bottomRight.style.backgroundColor = darkYellow;
+  bottomRight.style.backgroundColor = lightYellow;
   soundFour.play();
 }
 
 function resetColors() {
-  topLeft.style.backgroundColor = lightRed;
-  topRight.style.backgroundColor = lightGreen;
-  bottomLeft.style.backgroundColor = lightBlue;
-  bottomRight.style.backgroundColor = lightYellow;
-}
-
-function flashColors() {
   topLeft.style.backgroundColor = darkRed;
   topRight.style.backgroundColor = darkGreen;
   bottomLeft.style.backgroundColor = darkBlue;
   bottomRight.style.backgroundColor = darkYellow;
+}
+
+function flashColors() {
+  topLeft.style.backgroundColor = lightRed;
+  topRight.style.backgroundColor = lightGreen;
+  bottomLeft.style.backgroundColor = lightBlue;
+  bottomRight.style.backgroundColor = lightYellow;
   soundEnd.play();
 }
 
 function check() {
   if (playerOrder[playerOrder.length - 1] !== gameOrder[playerOrder.length - 1])
     isGood = false;
-
   if (isGood && playerOrder.length == 20)   {
     winGame();
   }
@@ -201,7 +214,6 @@ function check() {
     if (answer) {
         startGame();
     }
-
   }
   if (gamesNumberOfTurn == playerOrder.length && !hasWon && isGood)   {
     gamesNumberOfTurn++;
@@ -223,5 +235,10 @@ function setHiScore() {
 if (gamesNumberOfTurn > runHiScore) {
   runHiScore = gamesNumberOfTurn;
   hiScore.innerHTML = runHiScore;
+  localStorage.setItem("hiScore", runHiScore);
 }
+else {
+  hiScore.innerHTML = runHiScore;
+}
+
 }

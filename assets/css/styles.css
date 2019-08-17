@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Chicle|Raleway:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:900');
 
 html {
     padding: 0;
@@ -43,7 +43,7 @@ body {
     position: absolute;
     top: -10px;
     left: -10px;
-    box-shadow: inset 0px 0px 20px 20px #D32416;
+   /* box-shadow: inset 0px 0px 20px 20px #D32416;*/
 }
 
 #bottom-left {
@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 50%;
     left: -10px;
-    box-shadow: inset 0px -3px 20px 20px #0E63F1;   
+   /* box-shadow: inset 0px -3px 20px 20px #0E63F1;   */
 }
 
 #top-right {
@@ -67,7 +67,7 @@ body {
     position: absolute;
     top: -10px;
     left: 50%;
-    box-shadow: inset -9px 3px 20px 20px #3F983D;
+   /* box-shadow: inset -9px 3px 20px 20px #3F983D; */
 }
 
 #bottom-right {
@@ -79,7 +79,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    box-shadow: inset -9px -6px 20px 20px #BEC212;
+  /*  box-shadow: inset -9px -6px 20px 20px #BEC212; */
 }
 
 #centre {
@@ -280,8 +280,4 @@ box-shadow: none;
         padding-left: 10px;
     padding-right: 10px;
 }
-
-
-
-
 }
