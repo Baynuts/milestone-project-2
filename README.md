@@ -45,7 +45,7 @@ The logic of the application is as follows:
 ## Wireframe
 
 Can be viewed @ 
-https://baynuts.github.io/milestone-project-2/assets/images/simon-wireframe.jpg
+https://baynuts.github.io/milestone-project-2/assets/images/simon-wireframes.jpg
       
 ## Features
 
