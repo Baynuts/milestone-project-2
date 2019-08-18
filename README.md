@@ -79,6 +79,7 @@ I have also made use of the local storage function in JavaScript so that the hi 
 * VS Code
 * Audacity
 * Google Chrome
+* Git
 * Github
 * Jasmine
 * Audacity
@@ -93,7 +94,7 @@ The code can be viewed using GitHub pages: https://baynuts.github.io/milestone-p
 
 ## Testing
 
-Testing has completed using the usual W3C validator, Google Chrome Developer and Jasmine using the follwing code.
+Testing has completed using the usual W3C validator, Google Chrome Developer and Jasmine using the following code.
 
 ```
 describe("Simon Jasmine Testing", function() {
@@ -162,6 +163,7 @@ describe("Simon Jasmine Testing", function() {
     
 });    
 ```
+I also enlisted friends and family to test all the areas of the game. One problem arose when the user clicked the colours when it was the games turn, this broke the game as the "would you like to play again" pop up appeared yet the game still had instructions left in its memory. When the user clicked to play again, the game would continue the previous instructions that were stored in memory. This has now been fixed by not allowing any user interaction while it is the games turn.
 
 ## Credits
 
