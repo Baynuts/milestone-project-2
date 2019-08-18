@@ -136,8 +136,7 @@ function startGame() {
     gameOrder.push(Math.floor(Math.random() * 4) + 1);
   }
   gamesGo = true;
-  speed = 800;
-  pause = setInterval(gameTurn, 800);
+  pause = setInterval(gameTurn, speed);
   easyLevel.style.backgroundColor = "#4db74a";
   easyLevel.style.color = "#000";
   normalLevel.style.backgroundColor = "#000";
