@@ -4,7 +4,7 @@ let gamesNumberOfTurn;
 let gameOrder = [];
 let playerOrder = [];
 let isGood;
-let gamesGo;
+let gamesGo = true;
 let pause;
 let hasWon;
 let runHiScore = 0;
@@ -71,6 +71,7 @@ hardLevel.addEventListener('click', (event) => {
 });
 
 topLeft.addEventListener('click', (event) => {
+  if(!gamesGo) {
     playerOrder.push(1);
     check();
     red();
@@ -79,9 +80,11 @@ topLeft.addEventListener('click', (event) => {
       resetColors();
       }, 300);
     }
+  }
 })
 
 topRight.addEventListener('click', (event) => {
+  if(!gamesGo) {
     playerOrder.push(2);
     check();
     green();
@@ -90,9 +93,11 @@ topRight.addEventListener('click', (event) => {
       resetColors();
       }, 300);
     }
+  }
 })
 
 bottomLeft.addEventListener('click', (event) => {
+  if(!gamesGo) {
     playerOrder.push(3);
     check();
     blue();
@@ -101,9 +106,11 @@ bottomLeft.addEventListener('click', (event) => {
       resetColors();
       }, 300);
     }
+  }
 })
 
 bottomRight.addEventListener('click', (event) => {
+  if(!gamesGo) {
     playerOrder.push(4);
     check();
     yellow();
@@ -112,7 +119,8 @@ bottomRight.addEventListener('click', (event) => {
       resetColors();
       }, 300);
     }
-})
+  }
+  })
 
 //Functions
 function startGame() {
@@ -128,8 +136,8 @@ function startGame() {
     gameOrder.push(Math.floor(Math.random() * 4) + 1);
   }
   gamesGo = true;
-  pause = setInterval(gameTurn, 800);
   speed = 800;
+  pause = setInterval(gameTurn, 800);
   easyLevel.style.backgroundColor = "#4db74a";
   easyLevel.style.color = "#000";
   normalLevel.style.backgroundColor = "#000";
@@ -140,7 +148,6 @@ function startGame() {
     runHiScore = savedHiScore;
   }
   setHiScore();
-
 }
 
 function gameTurn() {
@@ -202,17 +209,20 @@ function flashColors() {
 }
 
 function check() {
-  if (playerOrder[playerOrder.length - 1] !== gameOrder[playerOrder.length - 1])
+  if (playerOrder[playerOrder.length - 1] !== gameOrder[playerOrder.length - 1])  {
     isGood = false;
+  }
   if (isGood && playerOrder.length == 20)   {
     winGame();
   }
   if (isGood == false)  {
     flashColors();
     setHiScore();
-    let answer = confirm("Would you like to play again")
-    if (answer) {
-        startGame();
+    if (confirm( "Would you like to play again?" )) {
+      startGame();
+    } else {
+      flashColors();
+      gamesGo = true;
     }
   }
   if (gamesNumberOfTurn == playerOrder.length && !hasWon && isGood)   {
@@ -221,7 +231,7 @@ function check() {
     gamesGo = true;
     numberOfTurns = 0;
     counter.innerHTML = gamesNumberOfTurn;
-    pause = setInterval(gameTurn, speed);
+    pause = setInterval(gameTurn, speed);  
   }
 }
 
@@ -232,14 +242,13 @@ function winGame() {
 }
 
 function setHiScore() {
-if (gamesNumberOfTurn > runHiScore) {
-  runHiScore = gamesNumberOfTurn;
-  hiScore.innerHTML = runHiScore;
-  savedHiScore = runHiScore;
-  localStorage.setItem("hiScore", runHiScore);
-}
-else {
-  hiScore.innerHTML = runHiScore;
-}
-
+  if (gamesNumberOfTurn > runHiScore) {
+    runHiScore = gamesNumberOfTurn;
+    hiScore.innerHTML = runHiScore;
+    savedHiScore = runHiScore;
+    localStorage.setItem("hiScore", runHiScore);
+  }
+  else {
+    hiScore.innerHTML = runHiScore;
+  }
 }
