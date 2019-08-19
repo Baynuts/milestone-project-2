@@ -130,7 +130,7 @@ function startGame() {
   hasWon = false;
   pause = 0;
   gamesNumberOfTurn = 1;
-  counter.innerHTML = gamesNumberOfTurn;
+  counter.innerHTML = gamesNumberOfTurn - 1;
   isGood = true;
   for (var i = 0; i < 20; i++)   {
     gameOrder.push(Math.floor(Math.random() * 4) + 1);
@@ -229,7 +229,7 @@ function check() {
     playerOrder = [];
     gamesGo = true;
     numberOfTurns = 0;
-    counter.innerHTML = gamesNumberOfTurn;
+    counter.innerHTML = gamesNumberOfTurn - 1;
     pause = setInterval(gameTurn, speed);  
     setHiScore();
   }
