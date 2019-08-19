@@ -169,7 +169,7 @@ function gameTurn() {
       numberOfTurns++;
       }, 200);
   }
-  setHiScore();
+
 }
 
 function red() {
@@ -231,6 +231,7 @@ function check() {
     numberOfTurns = 0;
     counter.innerHTML = gamesNumberOfTurn;
     pause = setInterval(gameTurn, speed);  
+    setHiScore();
   }
 }
 
