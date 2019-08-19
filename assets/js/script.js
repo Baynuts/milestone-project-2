@@ -243,7 +243,7 @@ function winGame() {
 
 function setHiScore() {
   if (gamesNumberOfTurn > runHiScore) {
-    runHiScore = gamesNumberOfTurn;
+    runHiScore = gamesNumberOfTurn - 1;
     hiScore.innerHTML = runHiScore;
     savedHiScore = runHiScore;
     localStorage.setItem("hiScore", runHiScore);
